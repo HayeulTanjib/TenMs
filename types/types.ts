@@ -17,4 +17,9 @@ export interface FeaturesType {
     icon: string;
     values: FeaturesType[]
 }
+export interface PointersType {
+  name: string,
+  text: string;
+  values: PointersType[]
+}
 

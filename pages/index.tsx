@@ -3,12 +3,15 @@ import { Data } from '@/types/types';
 import InstructorsSection from '@/components/InstructorSection';
 import { Inter } from 'next/font/google';
 import FeaturesSection from '@/components/FeaturesSection';
+import PointersSection from '@/components/PointersSection';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home({ data }: { data: Data }) {
   const instructorsData = data?.sections.find((item: any) => item.type === 'instructors');
-  const featuresData = data.sections.find((item: any) => item.type === 'features');
+  const featuresData = data?.sections.find((item: any) => item.type === 'features');
+  const pointersData = data?.sections.find((item: any) => item.type === 'pointers');
+  
 
   if (!data) {
     return <main>No Data Available!</main>;
@@ -22,6 +25,7 @@ export default function Home({ data }: { data: Data }) {
       </section>
       {instructorsData && <InstructorsSection instructorsData={instructorsData} />}
       {featuresData && <FeaturesSection featuresData={featuresData} />}
+      {pointersData && <PointersSection pointersData={pointersData} />}
     </main>
   );
 }
