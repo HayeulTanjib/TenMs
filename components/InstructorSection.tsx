@@ -1,6 +1,6 @@
 import { InstructorType } from "@/types/types";
 
-const InstructorsSection = ({instructorsData} : {instructorsData: InstructorType}) => {
+const InstructorSection = ({instructorsData} : {instructorsData: InstructorType}) => {
     return (
         <section>
         <h2 className='text:4xl font-semibold py-4'>{instructorsData.name}</h2>
@@ -19,4 +19,4 @@ const InstructorsSection = ({instructorsData} : {instructorsData: InstructorType
     );
 };
 
-export default InstructorsSection;
+export default InstructorSection;

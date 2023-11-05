@@ -1,12 +1,14 @@
 import { fetchData } from '@/apidata/api';
 import { Data } from '@/types/types';
-import InstructorsSection from '@/components/InstructorsSection';
+import InstructorsSection from '@/components/InstructorSection';
 import { Inter } from 'next/font/google';
+import FeaturesSection from '@/components/FeaturesSection';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home({ data }: { data: Data }) {
   const instructorsData = data?.sections.find((item: any) => item.type === 'instructors');
+  const featuresData = data.sections.find((item: any) => item.type === 'features');
 
   if (!data) {
     return <main>No Data Available!</main>;
@@ -19,6 +21,7 @@ export default function Home({ data }: { data: Data }) {
         <p>{data.description}</p>
       </section>
       {instructorsData && <InstructorsSection instructorsData={instructorsData} />}
+      {featuresData && <FeaturesSection featuresData={featuresData} />}
     </main>
   );
 }
