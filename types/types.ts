@@ -27,5 +27,6 @@ export interface MediaData {
     thumbnail_url: string;
     media: MediaData[];
     name: string;
+    resource_value: string;
 }
 
