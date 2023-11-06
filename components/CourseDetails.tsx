@@ -14,7 +14,7 @@ const CourseDetails = ({ courseDetailsData }: { courseDetailsData: CourseDetails
 
   return (
     <section className='py-6'>
-      <h2 className='text-2xl font-semibold py-4'>{courseDetailsData.name}</h2>
+      <h2 className='text-xl font-semibold py-6'>{courseDetailsData.name}</h2>
       <div className='border rounded-md'>
         {courseDetailsData.values.map((data, index) => {
           return <AccordionItem key={index} open={index === open} title={data.title} description={data.description} toggle={() => toggle(index)} />;

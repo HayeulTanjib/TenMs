@@ -38,3 +38,11 @@ export interface CourseDetailsType {
     active: string
 }
 
+export interface ExclusiveFeatureType {
+    name: string;
+    values: ExclusiveFeatureType[];
+    checklist: [];
+    title: string;
+    file_url: string;
+}
+

@@ -6,6 +6,7 @@ import FeaturesSection from '@/components/FeaturesSection';
 import PointersSection from '@/components/PointersSection';
 import ProductTrailer from '@/components/ProductTrailer';
 import CourseDetails from '@/components/CourseDetails';
+import ExclusiveFeature from '@/components/ExclusiveFeature';
 
 
 const inter = Inter({ subsets: ['latin'] });
@@ -15,6 +16,7 @@ export default function Home({ data }: { data: Data }) {
   const featuresData = data?.sections.find((item: any) => item.type === 'features');
   const pointersData = data?.sections.find((item: any) => item.type === 'pointers')
   const courseDetailsData = data?.sections.find((item: any) => item.type === 'about')
+  const exclusiveFeatureData = data?.sections.find((item: any) => item.type === 'feature_explanations')
 
 
   if (!data) {
@@ -34,6 +36,7 @@ export default function Home({ data }: { data: Data }) {
       {featuresData && <FeaturesSection featuresData={featuresData} />}
       {pointersData && <PointersSection pointersData={pointersData} />}
       {courseDetailsData && <CourseDetails courseDetailsData={courseDetailsData} />}
+      {exclusiveFeatureData && <ExclusiveFeature exclusiveFeatureData={exclusiveFeatureData} />}
         </div>
         <div>
       <ProductTrailer mediadata={data}/>
