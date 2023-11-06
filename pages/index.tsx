@@ -5,6 +5,8 @@ import { Inter } from 'next/font/google';
 import FeaturesSection from '@/components/FeaturesSection';
 import PointersSection from '@/components/PointersSection';
 import ProductTrailer from '@/components/ProductTrailer';
+import CourseDetails from '@/components/CourseDetails';
+
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -12,6 +14,7 @@ export default function Home({ data }: { data: Data }) {
   const instructorsData = data?.sections.find((item: any) => item.type === 'instructors');
   const featuresData = data?.sections.find((item: any) => item.type === 'features');
   const pointersData = data?.sections.find((item: any) => item.type === 'pointers')
+  const courseDetailsData = data?.sections.find((item: any) => item.type === 'about')
 
 
   if (!data) {
@@ -20,7 +23,7 @@ export default function Home({ data }: { data: Data }) {
 
   return (
     <main className={`p-8 ${inter.className}`}>
-
+      
       <div className='flex'>
         <div>
       <section>
@@ -30,6 +33,7 @@ export default function Home({ data }: { data: Data }) {
       {instructorsData && <InstructorsSection instructorsData={instructorsData} />}
       {featuresData && <FeaturesSection featuresData={featuresData} />}
       {pointersData && <PointersSection pointersData={pointersData} />}
+      {courseDetailsData && <CourseDetails courseDetailsData={courseDetailsData} />}
         </div>
         <div>
       <ProductTrailer mediadata={data}/>

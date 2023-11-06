@@ -30,3 +30,11 @@ export interface MediaData {
     resource_value: string;
 }
 
+export interface CourseDetailsType {
+    name: string;
+    values: CourseDetailsType[];
+    description: string;
+    title: string;
+    active: string
+}
+
