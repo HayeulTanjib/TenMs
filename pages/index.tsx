@@ -17,6 +17,7 @@ export default function Home({ data }: { data: Data }) {
   const pointersData = data?.sections.find((item: any) => item.type === 'pointers')
   const courseDetailsData = data?.sections.find((item: any) => item.type === 'about')
   const exclusiveFeatureData = data?.sections.find((item: any) => item.type === 'feature_explanations')
+  
 
 
   if (!data) {
@@ -39,7 +40,7 @@ export default function Home({ data }: { data: Data }) {
       {exclusiveFeatureData && <ExclusiveFeature exclusiveFeatureData={exclusiveFeatureData} />}
         </div>
         <div>
-      <ProductTrailer mediadata={data}/>
+      <ProductTrailer data={data}/>
         </div>
       </div>
     </main>

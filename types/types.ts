@@ -23,9 +23,9 @@ export interface PointersType {
   values: PointersType[]
 }
 
-export interface MediaData {
+export interface MediaDataType {
     thumbnail_url: string;
-    media: MediaData[];
+    media: MediaDataType[];
     name: string;
     resource_value: string;
 }
@@ -44,5 +44,11 @@ export interface ExclusiveFeatureType {
     checklist: [];
     title: string;
     file_url: string;
+}
+
+export interface ChecklistType {
+    text: string;
+    icon: string;
+    checklist: ChecklistType[];
 }
 
