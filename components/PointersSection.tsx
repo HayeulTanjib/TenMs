@@ -4,9 +4,9 @@ const PointersSection = ({ pointersData }: { pointersData: PointersType }) => {
     
     
   return (
-    <section>
-      <h2 className='text:4xl font-semibold py-4'>{pointersData.name}</h2>
-      <div className='grid md:grid-cols-2 gap-8 p-8 w-3/4 border border-grey-300 rounded-md'>
+    <section className='w-10/12'>
+      <h2 className='text-xl font-semibold pt-12 pb-4'>{pointersData.name}</h2>
+      <div className='grid md:grid-cols-2 gap-8 p-8 w-full border border-grey-300 rounded-md'>
         {pointersData?.values.map((info: any) => (
           <div className='flex gap-1'>
             <div>

@@ -1,8 +1,8 @@
-import { MediaData } from '@/types/types';
+import { MediaDataType } from '@/types/types';
 import { useState } from 'react';
 import CheckList from './CheckList';
 
-const ProductTrailer = ({ data }: { data: MediaData }) => {
+const ProductTrailer = ({ data }: { data: MediaDataType }) => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (

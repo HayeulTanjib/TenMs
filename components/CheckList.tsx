@@ -6,6 +6,7 @@ const CheckList = ({data}: {data:ChecklistType}) => {
     
     return (
         <section className="pt-6">
+            
             {
                 data?.checklist.map((info:any, index:number) => (
                     <div key={index} className="flex gap-2 pb-3 text-slate-600">
@@ -16,6 +17,7 @@ const CheckList = ({data}: {data:ChecklistType}) => {
                     </div>
                 ))
             }
+            
         </section>
     );
 };

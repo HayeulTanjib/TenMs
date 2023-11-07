@@ -2,13 +2,13 @@ import { FeaturesType } from "@/types/types";
 
 const FeaturesSection = ({featuresData} : {featuresData: FeaturesType}) => {
   return (
-    <section className="w-3/4">
-      <h2 className='text:4xl font-semibold py-4'>{featuresData.name}</h2>
-      <div className='grid md:grid-cols-2 gap-6 p-8 w-3/4 bg-[#111827] rounded-md'>
+    <section className="w-10/12">
+      <h2 className='text-lg font-semibold pt-12 pb-6'>{featuresData.name}</h2>
+      <div className='grid md:grid-cols-2 gap-6 p-8 w-full bg-[#111827] rounded-md'>
         {featuresData.values.map((info: any) => (
           <div className='flex gap-3'>
             <div>
-              <img src={info.icon} alt={info.title} />
+              <img height='150' width='150' src={info.icon} alt={info.title} />
             </div>
             <div>
               <h3 className='text-white'>{info.title}</h3>

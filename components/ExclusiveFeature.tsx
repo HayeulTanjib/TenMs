@@ -2,9 +2,9 @@ import { ExclusiveFeatureType } from '@/types/types';
 
 const ExclusiveFeature = ({ exclusiveFeatureData }: { exclusiveFeatureData: ExclusiveFeatureType }) => {
   return (
-    <section>
+    <section className='w-10/12'>
         <h2 className='text-xl font-semibold py-6'>{exclusiveFeatureData.name}</h2>
-    <div className='border rounded-md'>
+    <div className='border rounded-md w-full'>
       {exclusiveFeatureData.values.map((info, index) => (
         <div key={index}>
           <div className='flex justify-around pt-4'>
