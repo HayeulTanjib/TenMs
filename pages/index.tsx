@@ -43,7 +43,10 @@ export default function Home({ data }: { data: Data }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getServerSideProps(context:any) {
+  const { res } = context;
+  res.setHeader('X-TENMS-SOURCE-PLATFORM', 'web');
+
   try {
     const data = await fetchData();
     return {
